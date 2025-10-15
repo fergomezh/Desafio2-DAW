@@ -7,10 +7,26 @@ body {
   text-align: center;
   border-radius: 8px 8px 0 0;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  width: 400px;
+  height: 400px;
+  background: url("https://i.ibb.co/KcVG7NCd/mujer-haciendo-contabilidad.png") no-repeat center/contain;
+  opacity: 0.2;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
 .header h1 {
-  font-size: 1.5rem;
-  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
 }
 .available {
   font-size: 2rem;
