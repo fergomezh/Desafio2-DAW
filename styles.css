@@ -1,0 +1,94 @@
+body {
+  background-color: #eef2f6;
+}
+.header {
+  background-color: #1e293b;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px 8px 0 0;
+  color: white;
+}
+.header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+.available {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.positive {
+  color: #22c55e;
+}
+.negative {
+  color: #ef4444;
+}
+.ingresos-box,
+.egresos-box {
+  display: block;
+  min-width: 180px;
+  max-width: 300px;
+  margin: 10px auto;
+  width: auto;
+  border-radius: 8px;
+}
+.ingresos-box {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.egresos-box {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+.percentage {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+.percentage span {
+  background-color: #c7d2fe; /* Fondo azul claro solo para el porcentaje */
+  color: #1e293b; /* Texto oscuro para contraste */
+  border-radius: 12px;
+  padding: 4px 12px;
+  display: inline-block;
+}
+.transaction-section {
+  margin-top: 20px;
+}
+.details-section {
+  margin-top: 20px;
+}
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-group-item span {
+  font-weight: bold;
+}
+.nav-pills .nav-link {
+  background-color: #e2e8f0; /* Color claro para todos los tabs */
+  color: #1e293b; /* Texto oscuro para contraste */
+  margin-right: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-pills .nav-link.active {
+  background-color: #2563eb; /* Azul para el activo */
+  color: #fff; /* Texto blanco en el activo */
+}
+.expense-percentage {
+  background-color: #f87171; /* Rojo claro */
+  color: #fff;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+  margin-left: 8px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: middle;
+}
