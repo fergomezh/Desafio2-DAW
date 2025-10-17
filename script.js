@@ -45,7 +45,9 @@ const updateTotals = () => {
   incomes.forEach((trans) => {
     const li = document.createElement("li");
     li.classList.add("list-group-item");
-    li.innerHTML = `${trans.description} <span>+${trans.amount.toFixed(2)}</span>`;
+    li.innerHTML = `${trans.description} <span>+${trans.amount.toFixed(
+      2
+    )}</span>`;
     incomeList.appendChild(li);
   });
 
@@ -76,22 +78,25 @@ document.getElementById("transactionForm").addEventListener("submit", (e) => {
 
     if (type === "Ingreso") {
       incomes.push(transaction);
+      Swal.fire({
+        icon: "success",
+        title: "Ingreso agregado",
+        text: `Se registró un ingreso de $${amount.toFixed(2)} correctamente.`,
+        showConfirmButton: false,
+        timer: 1800,
+      });
     } else {
       expenses.push(transaction);
+      Swal.fire({
+        icon: "success",
+        title: "Egreso agregado",
+        text: `Se registró un egreso de $${amount.toFixed(2)} correctamente.`,
+        showConfirmButton: false,
+        timer: 1800,
+      });
     }
 
     updateTotals();
-
-    // Mostrar SweetAlert de éxito
-    Swal.fire({
-      icon: "success",
-      title: "Ingreso agregado",
-      text: `Se registró un ${type.toLowerCase()} de $${amount.toFixed(
-        2
-      )} correctamente.`,
-      showConfirmButton: false,
-      timer: 1800,
-    });
 
     document.getElementById("description").value = "";
     document.getElementById("amount").value = "";
@@ -111,6 +116,8 @@ document.getElementById("transactionForm").addEventListener("submit", (e) => {
   const date = new Date();
   const month = months[date.getMonth()];
   const year = date.getFullYear();
-  document.getElementById("title").textContent = `Presupuesto de ${month} ${year}`;
+  document.getElementById(
+    "title"
+  ).textContent = `Presupuesto de ${month} ${year}`;
   updateTotals();
 })();
